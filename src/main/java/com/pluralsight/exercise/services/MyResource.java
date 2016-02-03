@@ -20,6 +20,6 @@ public class MyResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
-        return "GET WORKS!";
+        return "GET is Working!!!!! Look how awesome you are!";
     }
 }
