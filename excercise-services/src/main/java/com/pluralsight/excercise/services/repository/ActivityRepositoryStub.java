@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.pluralsight.excercise.services.repository;
 
+import com.pluralsight.excercise.services.model.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +8,11 @@ import java.util.List;
  *
  * @author Zack Beck
  */
-public class ActivityRepositoryStub implements ActivityRepository {
+public abstract class ActivityRepositoryStub implements ActivityRepository {
 
-    public List<Activity> findAllActivities() {
-        List(Activity > activities = new ArrayList<Activity>());
+    @Override
+    public List<Activity> findAllActivities () {
+        List<Activity> activities = new ArrayList<Activity>();
 
         Activity activity1 = new Activity();
 

@@ -1,12 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.pluralsight.excercise.services;
 
+import com.pluralsight.excercise.services.model.Activity;
+import com.pluralsight.excercise.services.repository.ActivityRepository;
 import com.pluralsight.excercise.services.repository.ActivityRepositoryStub;
+import java.util.List;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /**
  *
@@ -16,10 +18,10 @@ import javax.ws.rs.Path;
 @Path("activities")
 public class ActivityResource {
     
-    private ActivityRepository activityRepository = new ActivityRepositoryStub();
+    private ActivityRepository activityRepository = new ActivityRepositoryStub() {};
     
     @GET
-    @Produces(MediaType.Application_XML)
+    @Produces(MediaType.APPLICATION_XML)
     public List<Activity> getAllActivities() {
         return activityRepository.findAllActivities();
     }
