@@ -1,6 +1,7 @@
 package com.pluralsight.excercise.services.repository;
 
 import com.pluralsight.excercise.services.model.Activity;
+import com.pluralsight.excercise.services.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +40,12 @@ public abstract class ActivityRepositoryStub implements ActivityRepository {
         activity1.setId("1234");
         activity1.setDescription("Swimming");
         activity1.setDuration(55);
+        
+        User user = new User();
+        user.setId("1590");
+        user.setName("Zack");
+        
+        activity1.setUser(user);
         
         return activity1;
         
