@@ -21,7 +21,7 @@ import javax.ws.rs.core.MediaType;
 public class ActivityResource {
     
     private ActivityRepository activityRepository = new ActivityRepositoryStub() {};
-    private User User;
+    
     
     @GET
     @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
@@ -40,7 +40,7 @@ public class ActivityResource {
     @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
     @Path("{activityId}/user") //http:localhost:8080/exercise-services/webapi/activities/1234/user
     public User getActivityUser(@PathParam ("activityId") String activityId) {
-        return (Activity) activityRepository.findActivity(activityId).getUser();
+        return activityRepository.findActivity(activityId).getUser();
         }
         
         //Activity activity = activityRepository.findActivity(activityId);
