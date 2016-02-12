@@ -1,4 +1,3 @@
-
 package com.pluralsight.excercise.services;
 
 import com.pluralsight.excercise.services.model.Activity;
