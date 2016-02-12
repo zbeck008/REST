@@ -38,17 +38,15 @@ public class ActivityResource {
     
     @GET
     @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-    @Path("{activityId}/user") //https:localhost:8080/exercise-services/webapi/activities/1234/user
+    @Path("{activityId}/user") //http:localhost:8080/exercise-services/webapi/activities/1234/user
     public User getActivityUser(@PathParam ("activityId") String activityId) {
-        {
+        return (Activity) activityRepository.findActivity(activityId).getUser();
+        }
         
-        Activity activity = activityRepository.findActivity(activityId);
-        User user = activity.getUser();
-        return User;
-        //return (Activity) activityRepository.findActivity(activityId)
+        //Activity activity = activityRepository.findActivity(activityId);
+        //User user = activity.getUser();
+        //return User;
         
-    }
         
-    }
-    
-}
+        }
+        
